@@ -12,23 +12,21 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate {
 	
 	var arrayOfDatas: [CurrencyRates] = []
-	let someClass = HttpRequest()
+	let mainStartClassApp = HttpRequest()
 	
 	@IBOutlet weak var mainTableView: UITableView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		someClass.delegate = self
-		someClass.httpRequest()
+		mainStartClassApp.delegate = self
 		mainTableView.dataSource = self
 		super.view.addSubview(mainTableView)
-		//mainTableView.setEditing(true, animated: true)
 		mainTableView.isEditing = true
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
+		mainStartClassApp.httpRequest()
 	}
 }
 
@@ -64,13 +62,6 @@ extension ViewController: UITableViewDataSource {
 		arrayOfDatas.insert(movedObject, at: destinationIndexPath.row)
 		mainTableView.reloadData()
 	}
-/*
-	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		swap(&arrayOfDatas[sourceIndexPath.row], &arrayOfDatas[destinationIndexPath.row])
-		print(arrayOfDatas)
-		//mainTableView.reloadData()
-	}
-	*/
 }
 
 extension ViewController: HttpRequestDelegate {
@@ -94,6 +85,5 @@ extension ViewController: ParserOfDataDelegate {
 		arrayOfDatas = items
 		print(arrayOfDatas)
 		mainTableView.reloadData()
-		
 	}
 }

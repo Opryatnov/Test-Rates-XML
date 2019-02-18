@@ -186,10 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-
-
-";
+			shellScript = "\n\n\n";
 		};
 		210C2F55BBE81543AB535E91 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -232,8 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RatesTestProject/Pods-RatesTestProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -275,6 +271,7 @@
 /* Begin XCBuildConfiguration section */
 		118B1B1B220CD70E0067472A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41ABBB6E17C911E90AD51169 /* Pods-RatesTestProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -336,6 +333,7 @@
 		};
 		118B1B1C220CD70E0067472A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F32E0FF07EA3188D18001E5 /* Pods-RatesTestProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

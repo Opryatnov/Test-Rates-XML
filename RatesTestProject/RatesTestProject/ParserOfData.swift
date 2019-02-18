@@ -30,7 +30,6 @@ class ParserOfData: NSObject, XMLParserDelegate {
 	var resultItem = [CurrencyRates]()
 	
 	var elementName: String = String()
-	//var currency = String()
 	var numCode = String()
 	var charCode = String()
 	var scale = String()
@@ -89,5 +88,4 @@ class ParserOfData: NSObject, XMLParserDelegate {
 		//print(resultItem)
 		parserDelegate?.didFinishParsing(items: resultItem)
 	}
-	
 }
