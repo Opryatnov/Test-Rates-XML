@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate {
 		mainTableView.dataSource = self
 		super.view.addSubview(mainTableView)
 		mainTableView.isEditing = true
+		mainTableView.backgroundColor = UIColor.darkGray
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +44,10 @@ extension ViewController: UITableViewDataSource {
 		}
 		
 		let item = arrayOfDatas[indexPath.row]
+		cell.backgroundColor = UIColor.gray
+		cell.charCodeLabel.textColor = UIColor.white
 		cell.charCodeLabel.text = item.name + " за " + item.scale + " ед."
+		cell.nameLabel.textColor = UIColor.white
 		cell.nameLabel.text = item.charCode + " " + item.rate + " BYN"
 		return (cell)
 	}
@@ -68,7 +72,9 @@ extension ViewController: HttpRequestDelegate {
 	
 	func httpRequestDidError(_ message: String) {
 		let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+		alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+		self.mainStartClassApp.httpRequest()
+		}))
 		self.present(alert, animated: true, completion: nil)
 	}
 	
