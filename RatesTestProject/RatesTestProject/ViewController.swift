@@ -87,8 +87,8 @@ extension ViewController: HttpRequestDelegate {
 
 extension ViewController: ParserOfDataDelegate {
 	
-	func didFinishParsing(items: [CurrencyRates]) {
-		arrayOfDatas = items
+	func didFinishParsing(dataAfterParsing: [CurrencyRates]) {
+		arrayOfDatas = dataAfterParsing
 		print(arrayOfDatas)
 		mainTableView.reloadData()
 	}
