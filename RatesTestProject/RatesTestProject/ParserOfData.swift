@@ -19,7 +19,7 @@ struct CurrencyRates {
 
 protocol ParserOfDataDelegate: class {
 	
-	func didFinishParsing(items: [CurrencyRates])
+	func didFinishParsing(dataAfterParsing: [CurrencyRates])
 	
 }
 
@@ -86,6 +86,6 @@ class ParserOfData: NSObject, XMLParserDelegate {
 	
 	func parserDidEndDocument(_ parser: XMLParser) {
 		//print(resultItem)
-		parserDelegate?.didFinishParsing(items: resultItem)
+		parserDelegate?.didFinishParsing(dataAfterParsing: resultItem)
 	}
 }
