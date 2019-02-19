@@ -27,8 +27,5 @@ class CustomTableViewCell: UITableViewCell {
 }
 
 extension CustomTableViewCell: UITableViewDelegate {
-	
-//	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		print("did select raw at indexPath: \(indexPath)")
-//	}
+
 }
