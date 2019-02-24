@@ -77,6 +77,15 @@ extension ViewController: HttpRequestDelegate {
 		}))
 		self.present(alert, animated: true, completion: nil)
 	}
+    
+    func httpResponseError(_ message: String) {
+        let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            //self.mainStartClassApp.httpRequest()
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 	
 	func httpRequestDidLoadData(_ data: Data) {
 		let parser = ParserOfData()

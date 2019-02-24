@@ -13,6 +13,7 @@ protocol HttpRequestDelegate: class {
     
     func httpRequestDidError(_ message: String)
     func httpRequestDidLoadData(_ data: Data)
+    func httpResponseError(_ response: String)
 }
 
 class HttpRequest {
@@ -37,17 +38,19 @@ class HttpRequest {
         request.httpMethod = "GET"
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
-            print(response as Any)
+                //print(response)
             if let data = data {
                 if error != nil {
+                    self.delegate?.httpRequestDidError("Server return error, try send request later")
                     print(error?.localizedDescription as Any)
                 }
-                    DispatchQueue.main.async {
-                        self.delegate?.httpRequestDidLoadData(data)
+                DispatchQueue.main.async {
+                    self.delegate?.httpRequestDidLoadData(data)
                 }
             }
             
             guard data != nil else { return }
+            
             } .resume()
     }
 }
