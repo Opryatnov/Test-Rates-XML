@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "1cG-Ma-hth"; */
+"1cG-Ma-hth.normalTitle" = "Edit";
+
+/* Class = "UINavigationItem"; title = "Rates"; ObjectID = "IiV-Ot-qdS"; */
+"IiV-Ot-qdS.title" = "Rates";
+
+/* Class = "UIButton"; normalTitle = "Return"; ObjectID = "JVj-8V-SWn"; */
+"JVj-8V-SWn.normalTitle" = "Return";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "Kco-nl-fuL"; */
+"Kco-nl-fuL.title" = "Item 1";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "QP0-wb-oRt"; */
+"QP0-wb-oRt.title" = "Item 2";
+
+/* Class = "UITextField"; placeholder = "Enter date"; ObjectID = "gZB-83-BPl"; */
+"gZB-83-BPl.placeholder" = "Enter date";
+
+/* Class = "UINavigationItem"; title = "Calculate Rates"; ObjectID = "jyk-NJ-Vvf"; */
+"jyk-NJ-Vvf.title" = "Calculate Rates";
+
+/* Class = "UITabBarItem"; title = "Calculate"; ObjectID = "p4g-eW-2VP"; */
+"p4g-eW-2VP.title" = "Calculate";
+
+/* Class = "UITabBarItem"; title = "Rates"; ObjectID = "qiS-ou-rMx"; */
+"qiS-ou-rMx.title" = "Rates";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tIo-cv-dhq"; */
+"tIo-cv-dhq.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vMf-ju-hra"; */
+"vMf-ju-hra.text" = "Label";
